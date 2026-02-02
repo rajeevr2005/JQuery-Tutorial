@@ -1,0 +1,7 @@
+//Jquery is a javascript library. It is lightweight.Jquery is developed by John Resig in january2006.
+
+//The main purpose behind Jquery is to simplify HTML DOM manipulation, event handling, animation, and ajax.
+
+//Syntax of Jquery is $(selector).action()      //selector means id, class, Tagname, etc
+
+//jQuery action() to be performed on the element(s)
