@@ -1,1 +1,51 @@
+//Multiple operation like color, font size apply on unordered list
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Session</title>
+</head>
+<body>
+
+      <ul id="List1">
+        <li>India</li>
+        <li>China</li>
+        <li>USA</li>
+        <li>Russia</li>
+        <li>Srilanka</li>
+        <li>Pakistan</li>
+        <li>Africa</li>
+        <li>England</li>
+      </ul>
+
+      <input type="button" id="btn" value="Click Me">
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+
+                //1st way
+
+                // $("#List1 li").css("font-size","40px")
+
+                //2nd way
+
+                $("ul li").css("font-size","40px")      //isme jitna bhi ul hoga sabka font size 40px ho jayeg
+
+
+                //agar mai chahta hu li jo jo even hai uska color red lar do
+
+                $("ul li:even").css("color","red") 
+
+                 $("ul li:first-child").css("color","red")  //isme sirf first wala li ka color red hoga
+
+            });
+        });
+    </script>
+</body>
+</html>
 
