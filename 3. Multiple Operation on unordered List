@@ -49,3 +49,44 @@
 </body>
 </html>
 
+
+//-----------------Multiple Operation Perform on unordered list part 2------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Session</title>
+</head>
+<body>
+
+      <ul id="List1">
+        <li>India</li>
+        <li>China</li>
+        <li>USA</li>
+        <li>Russia</li>
+        <li>Srilanka</li>
+        <li>Pakistan</li>
+        <li>Africa</li>
+        <li>England</li>
+      </ul>
+
+      <input type="button" id="btn" value="Click Me">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("ul li:eq(2)").css({"font-size":"40px","color":"red"})    //ul li jiska index=2 ho uspe apply hoga, index 0 se start hota h
+
+                  $("ul li:lt(5)").css({"font-size":"30px","color":"green"})    //ul li jiska index less than 5 ho uspe apply hoga
+
+                    $("ul li:gt(2)").css({"font-size":"40px","color":"red"})    //ul li jiska index greater than 2 ho uspe apply hoga, index 0 se start hota h
+            })
+        })
+
+
+    </script>
+</body>
+</html>
