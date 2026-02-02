@@ -25,3 +25,38 @@
     </script>
 </body>
 </html>
+
+//----------------Program 2----------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Session</title>
+</head>
+<body>
+
+    <p id="p1">Welcome to Jquery</p>
+    <p id="p1">Welcome to Jquery session</p>
+    
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+
+    <input type="button" value="Submit" id="btn">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    //JQuery cdn
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("*").css({"font-family":"cooper","font-size":"100px"})        //multiple css line apply by using array
+            })
+        })    
+
+    </script>
+</body>
+</html>
+
