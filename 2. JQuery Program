@@ -60,3 +60,5 @@
 </body>
 </html>
 
+//agar tumko jquery ka cdn use na karke, download karke use karna ho to search karna JQuery uske baad jo compressed version hoga n, 
+uspe click kar dena, kuch code aayega, ctrl + A karke pura copy kar lena aur ek js ka file bna kar paste kar dena, us js file ko html me script tag se connect kar dena 
