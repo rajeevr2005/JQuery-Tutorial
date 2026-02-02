@@ -1,1 +1,27 @@
+//----------Program 1---------------
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Session</title>
+</head>
+<body>
+
+    <p id="p1">Welcome to Jquery</p>
+    <input type="button" value="Click" id="Btn">
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    //JQuery cdn
+
+    <script>
+        $(document).ready(function(){
+            $("#Btn").click(function(){
+                $("#p1").css("color","red")
+            })
+        });
+        
+    </script>
+</body>
+</html>
