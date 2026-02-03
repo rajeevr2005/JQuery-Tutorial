@@ -1,0 +1,55 @@
+//Hide the content using hide() method
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Session</title>
+</head>
+<body>
+
+    <h1>Welcome to Jquery Series</h1>
+
+      <input type="button" id="HideBtn" value="Hide">
+      
+      <input type="button" id="ShowBtn" value="Show">
+      
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+    //-------------1st way to hide----------------
+
+        $(document).ready(function(){
+           $("#HideBtn").click(function(){
+            $("h1").hide();                 //hide() isme argument pass karte h slow fast ya    time milisecond me, slowly hide ho ya fast hide ho
+           }) 
+
+
+           //-------------2nd way to hide----------------
+            $(document).ready(function(){
+           $("#HideBtn").click(function(){
+            $("h1").hide(2000,function(){       //ye 2sec me hide hoga, uske baad ye function   chalega, argument ko speed aur callback bolte h
+                alert("Success")
+            });
+           }) 
+
+        //-------------3rd way to hide----------------
+
+           $("#HideBtn").click(function(){
+            $(this).hide(2000,function(){       //this lagane se hide button hi gayab ho jayega
+                alert("Success")
+            });
+
+        //-------------4th way to hide----------------
+
+            $("#ShowBtn").click(function(){
+            $("h1").hide("slow");           //isme content slowly hide hoga
+           })
+
+        })
+
+    </script>
+</body>
+</html>
