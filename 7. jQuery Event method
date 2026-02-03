@@ -1,0 +1,265 @@
+//-----------Commonly used JQuery Event Methods-------------
+
+1.  $(document).ready()
+    This method allows us to execute a function when the document is fully ready.
+
+
+    //Mouse Events
+    1. Click
+    2. contextMenu
+    3. Dblclick
+    4. Mouseenter
+    5. Mouseleave
+    6. Mousedown
+    7. Mouseup
+    8. Focus
+    9. Blur
+    10. on
+
+    1. ---------------- click ------------------
+        The click() method attaches an event handler function to an HTML element
+
+        <!DOCTYPE html>
+            <html lang="en">
+            <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Mouse Event</title>
+        </head>
+        <body>
+
+
+    <h1>Welcome to JQuery Series</h1>
+
+    <input type="button" value="Click Me" id="Btn">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#Btn").click(function(){
+                $("h1").css("color","red")
+            })
+        })
+    </script>
+</body>
+</html>
+
+
+2.------------- contextmenu -----------------
+
+The function is executed, when the right button of mouse is clicked
+jab hm 
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+
+
+    <h1>Welcome to JQuery Series</h1>
+
+    
+    <input type="button" value="Click Me" id="Btn">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#Btn").contextmenu(function(){
+                $("h1").css("color","red")
+            })
+        })
+    </script>
+</body>
+</html>
+
+
+3.------------- dblclick -----------------  
+    
+    The dblclick() method attaches an events handler function to an HTML element. Double click karne pe ye chalega
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+
+
+    <h1>Welcome to JQuery Series</h1>
+
+
+    <input type="button" value="Click Me" id="Btn">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#Btn").dblclick(function(){
+                $("h1").css("color","red")
+            })
+        })
+    </script>
+</body>
+</html>
+
+
+4.------------- mouseenter ----------------- 
+
+    The function is executed when the mouse pointer enters the HTML element
+    jaise hi hmlog mouse ko us element ke upper lekar jaate h tab ye event chalta h.
+
+
+    //---1st way jab hmlog button pe mouse le jayenge tab h1 ka color red ho jayega--------
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+
+
+    <h1>Welcome to JQuery Series</h1>
+
+
+    <input type="button" value="Click Me" id="Btn">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#Btn").mouseenter(function(){
+                $("h1").css("color","red")
+            })
+        })
+    </script>
+</body>
+</html>
+
+//------2nd way jab hmlog h1 pe mouse le jayenge to color red ho jayega----------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+
+
+    <h1>Welcome to JQuery Series</h1>
+
+
+    <input type="button" value="Click Me" id="Btn">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("h1").mouseenter(function(){      //yaha pe jaise hi h1 pe mouse le jau color red ho jayega
+                $("h1").css("color","red")
+            })
+        })
+    </script>
+</body>
+</html>
+
+4.------------- mousedown ----------------- 
+
+    The function is executed, when the left,middle or right mouse button is pressed down, while the mouse is over the HTML element.
+    jab hmlog mouse ka koi bhi button press kare to event chal jayega 
+
+
+5. ------------- mouseup ----------------- 
+
+    The function is executed, when the left,middle or right mouse button is released, while the mouse is over the HTML element.
+    jab hmlog mouse ka koi bhi button presschhor de to ye event chal jayega 
+
+5. ------------- focus -----------------
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+
+
+    <!-- <h1>Welcome to JQuery Series</h1>
+
+    <br> -->
+
+    <input type="text" placeholder="Name" id="txt">
+
+
+    <input type="button" value="Click Me" id="Btn">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#txt").focus(function(){
+                $("#txt").css("background-color","red")
+            })
+        })
+    </script>
+</body>
+</html>
+
+
+5. ------------- on -----------------
+
+    on event kab lagate h jab hmlog ko ek hi element pe multiple event lagana ho jaise mouseenter,mouseup, mousedown, etc;
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+
+
+   
+
+    <h1>Welcome to jquery session</h1>
+
+
+
+    <input type="button" value="Click Me" id="Btn">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            $("h1").on({
+                mouseenter:function(){
+                        $("h1").css("background-color","red")
+                },
+                mouseleave:function(){
+                    $("h1").css("background-color","aqua");
+                },
+                click:function(){
+                    $("h1").css("background-color","green")
+                }
+            })
+        })
+        
+    </script>
+</body>
+</html>
