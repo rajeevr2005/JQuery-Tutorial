@@ -1,1 +1,55 @@
+//Show content using show() method
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Session</title>
+</head>
+<body>
+
+    <h1>Welcome to Jquery Series</h1>
+
+      <input type="button" id="HideBtn" value="Hide">
+      
+      <input type="button" id="ShowBtn" value="Show">
+    
+      
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        //----------1st way---------------
+        $(document).ready(function(){
+           $("#HideBtn").click(function(){
+            $("h1").show(2000,function(){       //content 2 sec baad show hoga
+                alert("Success")
+            });
+           }) 
+
+        //---------2nd way----------------
+
+           $("#ShowBtn").click(function(){
+            $("h1").show();         
+           })
+
+           
+        //--------3rd way-----------------
+
+           $("#ShowBtn").click(function(){
+            $("h1").show("fast");         
+           })
+
+        //--------4th---------------------
+
+        $("#ShowBtn").click(function(){
+            $(this).show();         
+           })  
+
+        })
+
+    </script>
+</body>
+</html>
 
