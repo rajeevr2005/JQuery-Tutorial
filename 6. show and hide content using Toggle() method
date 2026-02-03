@@ -1,1 +1,48 @@
+//Hide and show the content using toggle method(one button)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Session</title>
+</head>
+<body>
+
+    <h1>Welcome to Jquery Series</h1>
+
+      
+      <input type="button" id="ShowHide" value="Hide and Show">
+      
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+    
+        //-------1st way-----------
+
+           $("#ShowHide").click(function(){
+            $("h1").toggle();
+           })
+
+        //-------2nd way------------
+
+            $("#ShowHide").click(function(){
+            $("h1").toggle("slow");
+           })
+
+        //------3rd-----------------
+
+         $("#ShowHide").click(function(){
+            $(this).toggle(2000,function(){
+                alert("Toggle button Hide")
+            });
+           })
+   
+        })
+
+    </script>
+</body>
+</html>
 
