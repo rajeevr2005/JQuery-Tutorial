@@ -1,0 +1,61 @@
+----------- Append method ---------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Series</title>
+</head>
+<body>
+    
+    <h1>Welcome to jQuery Series</h1>
+    <input type="button" id="btn" value="Click Me!">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("h1").append("<p>This is a Paragraph</p>")
+            })
+        })
+    </script>
+</body>
+</html>
+
+------------Append li in ol--------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Series</title>
+</head>
+<body>
+    
+    <h1>Welcome to jQuery Series</h1>
+    <input type="button" id="btn" value="Click Me!">
+
+    <ul>
+        <li>India</li>
+        <li>America</li>
+        <li>England</li>
+        <li>Russia</li>
+        <li>SriLanka</li>
+    </ul>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("ul").append("<li>Newzealand</li>")
+            })
+        })
+    </script>
+</body>
+</html>
