@@ -1,0 +1,61 @@
+---------------html content ko set(change click karne pe) karne ke liye-------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Series</title>
+</head>
+<body>
+
+        <h1 id="head">Welcome to jQuery Session</h1>
+
+        <input type="button" value="Click Me" id="btn"> 
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    $("#head").text("Welcome to jQuery Series Day 2").css("color","red");
+                })
+            })
+        </script>
+    
+</body>
+</html>
+
+
+--------pura element(including tag)change karne ke liye--------------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Series</title>
+</head>
+<body>
+
+        <p id="head">Welcome to jQuery Session</p>
+
+        <input type="button" value="Click Me" id="btn"> 
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    $("#head").html("Welcome to <b>jQuery Series</b> Day 2").css({"color":"red","font-size":"24px"});
+                })
+            })
+        </script>
+    
+</body>
+</html>
+
+
+
