@@ -1,0 +1,60 @@
+-------------------------Val Method----------------------
+
+The val() method returns or sets the value attribute of the selected elements.
+The val() method is mostly used with HTML form elements.
+
+-----------Perform Arithmetic Operation------------
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery</title>
+    </head>
+    <body>
+
+        <form>
+            <p id="output"></p>
+            <input type="text" placeholder="Num1" id="num1">
+            <p id="num1Error" style="color:red"></p>
+            <input type="text" placeholder="Num2" id="num2">
+            <p id="num2Error" style="color:red"></p>
+            <input type="button" value="Add" id="btn">
+        </form>
+
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <script>
+
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                let num1=$("#num1").val();
+                let num2=$("#num2").val();
+
+                $("#output").text("");
+                isValid=true;
+
+                if(num1===""){
+                    $("#num1Error").text("Nmber1 is required");
+                    isValid=false;
+            }
+
+        if(num2===""){
+            $("#num2Error").text("Number2 is required");
+            isValid=false;
+        }
+
+
+        if(isValid){
+           let c=parseFloat(num1)+parseFloat(num2);
+            $("#output").text(c);
+        }
+
+            })
+        })
+
+    </script>
+    </body>
+</html>
