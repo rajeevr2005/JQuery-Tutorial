@@ -1,0 +1,133 @@
+-----------html content get karne ke liye-------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Series</title>
+</head>
+<body>
+
+
+    <h1 id="head">Welcome to jQuery Series</h1>
+
+    <input type="button" value="Get" id="btn">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                let para=$("#head").text();     //yaha text ko get karne ke liye use karte h
+                alert(para);                    //output=Welcome to jQuery Serie
+            })
+        })
+    </script>
+    
+</body>
+</html>
+
+
+------------html element(tag + content get karne ke liye)-------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Series</title>
+</head>
+<body>
+
+
+    <h1 id="head">Welcome to <span style="color:red">jQuery Series</span ></h1>
+
+    <input type="button" value="Get" id="btn">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                let para=$("#head").html();     
+                alert(para);                    
+            })
+        })
+    </script>
+    
+</body>
+</html>
+
+-------------Gender selection and print------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Series</title>
+</head>
+<body>
+
+    <label>Gender</label>
+    <input type="radio" value="Male" name="gender" id="male">
+    <label>Male</label>
+    <input type="radio" value="Female" name="gender" id="female">
+    <label>Female</label>
+
+    <p id="output"></p>
+
+    <input type="button" value="Submit" id="btn">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+              let a= $("input[name='gender']:checked").val();  
+              $("#output").text(a);                
+            })
+        })
+    </script>
+    
+</body>
+</html>
+
+--------------Attribute ki value get karne ke liye-----------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Series</title>
+</head>
+<body>
+
+    <a href="https://google.com/" title="Google">Click Me</a>
+
+    <p id="output"></p>
+
+    <input type="button" value="CLick Me" id="btn">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+              let attrVal=$("a").attr("href");      //yaha pe href ki value aayegi yaha pe
+              let titleVal=$("a").attr("title");      //yaha pe href ki value aayegi yaha pe
+              alert(attrVal)     
+              alert(titleVal);        
+            })
+        })
+    </script>
+    
+</body>
+</html>
