@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery</title>
+    </head>
+    <body>
+
+        <select id="countries">
+            <option value="-1">Select Country</option>
+            <option value="India">India</option>
+            <option value="America">America</option>
+            <option value="China">China</option>
+            <option value="Russia">Russia</option>
+            <option value="Nepal">Nepal</option>
+        </select>
+        <p id="Error"></p>
+        <h1 id="output"></h1>
+
+        <input type="button" id="btn" value="Submit">
+
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+            <script>
+                $(document).ready(function(){
+                    $("#btn").click(function(){
+                        let item=$("#countries").val();
+                        if (item==="-1"){
+                            $("#Error").text("Please select option")
+                        }else{
+                            $("#output").text("You have selected " + item)
+                        }
+                    })
+                })
+            </script>
+
+    </script>
+    </body>
+</html>
