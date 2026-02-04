@@ -1,0 +1,117 @@
+-----After method--------
+
+//isme div ke bahar append ya prepend hoga
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Series</title>
+
+    <style>
+        .headDiv{
+            height:200px;
+            width:200px;
+            border-radius:10px;
+            background-color: lightseagreen;
+        }
+
+        /* input{
+            margin-top: 10px;
+        } */
+
+        ul li{
+            color:white;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>Welcome to jQuery Series</h1>
+
+    <div class="headDiv">
+        <ul>
+            <li>India</li>
+            <li>Russia</li>
+            <li>America</li>
+            <li>England</li>
+        </ul>
+
+    </div>
+
+
+    <input type="button" id="btn" value="After">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $(".headDiv").after("<p>Newzealand</p>")
+            })
+        })
+    </script>
+</body>
+</html>
+
+----Add element before div------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Series</title>
+
+    <style>
+        .headDiv{
+            height:200px;
+            width:200px;
+            border-radius:10px;
+            background-color: lightseagreen;
+        }
+
+        /* input{
+            margin-top: 10px;
+        } */
+
+        ul li{
+            color:white;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>Welcome to jQuery Series</h1>
+
+    <div class="headDiv">
+        <ul>
+            <li>India</li>
+            <li>Russia</li>
+            <li>America</li>
+            <li>England</li>
+        </ul>
+
+    </div>
+
+
+    <input type="button" id="btn" value="Before">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $(".headDiv").before("<p>Newzealand</p>")
+            })
+        })
+    </script>
+</body>
+</html>
