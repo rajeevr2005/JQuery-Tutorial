@@ -1,0 +1,160 @@
+change() method in jquery
+
+The change event occurs when the value of an element has been changed(only working on <input>,<textarea> and <select> elements ).
+Yaha pe bina button click kiye hi jo tum select wale field me jo select karoge wo data dikh jayega
+
+
+----------------Program 1------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <select id="list">
+        <option value="-1">Select fruit</option>
+        <option value="Mango">Mango</option>
+        <option value="Banana">Banana</option>
+        <option value="Grapes">Grapes</option>
+        <option value="Litchi">Litchi</option>
+        <option value="Papaya">Papaya</option>
+    </select>
+
+    <h1></h1>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#list").change(function(){
+                let a=$("#list").val();
+
+                if(a==="-1"){
+                    alert("please select the fruit");
+                }else{
+                    $("h1").text("You have selected "+a);
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>
+
+
+-------------------Program 2--------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Name" id="name">
+
+    <h1></h1>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#name").change(function(){
+                let a=$("#name").val();
+
+                if(a===""){
+                    alert("please enter the name");
+                }else{
+                    $("h1").text("You have selected "+a);
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>
+
+
+-------------------------------------------------------------------------------------------------------
+
+select() method
+
+The select event occurs when a text is selected(marked) in a text area or a text field.
+jaise hi hmlog koi line select karenge to message show karta h
+ye sirf input field aur textarea pe kaam karta h.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="Name" id="text">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#text").select(function(){
+                alert("You have selected the text");
+            })
+        })
+    </script>
+
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------
+
+submit() method
+
+jab hmlog input type submit  karte h to page reload hota h, aur h1 tag me data print ke liye likhe h n wo print nhi ho pata h, isliye preventDefault() method lagaye hue h ki page ko reload se rokta h, aur h1 tag me data show hota h.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="myform">
+    <input type="text" placeholder="Name" id="name" required>
+    <input type="number" placeholder="number" id="num" required>
+    <input type="submit" value="Submit" id="btn">
+    </form>
+
+    <h1></h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#myform").submit(function(event){
+                event.preventDefault();         //ye page ko reload se rokta h
+                let username= $("#name").val();
+               let number=$("#num").val();
+                $("h1").text(username +" "+ number)
+                alert("form has been submitted");   //yaha page reload hota h
+               
+            })
+        })
+    </script>
+
+</body>
+</html>
