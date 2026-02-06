@@ -30,3 +30,346 @@ $(document).ready(function(){ $("#btn").click(function(){ $("#box").empty();
 </script> 
 </body> 
 </html>
+
+----------------------------------------------------------------- 
+2. remove() - ye pura div ho remove kar deta h 
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>jQuery series</title> 
+<style> 
+#box{ 
+height:200px; 
+width:200px; 
+border:2px solid black; background-color:aqua ; 
+} 
+</style> 
+</head> 
+<body> 
+<h1 id="output"></h1> 
+<div id="box"> 
+<h1>This is Paragraph</h1> 
+</div> 
+<input type="button" value="Submit" id="btn"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+<script> 
+$(document).ready(function(){ 
+$("#btn").click(function(){ 
+$("#box").remove(); 
+}) 
+}) 
+</script> 
+</body>
+</html> --------------------------------------------------------------------------------------- 
+3. //clone :- agar tum ek div bnaye ho aur clone method lagaye hue ho to same div ka copy bnega 
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>jQuery series</title> 
+<style> 
+#box{ 
+height:200px; 
+width:200px; 
+border:2px solid ridge; background-color:aqua ; 
+} 
+
+</style> 
+</head> 
+<body> 
+<h1 id="output"></h1> 
+<div id="box"> 
+<h1>This is Paragraph</h1> 
+</div> <input type="button" value="Submit" id="btn"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+<script> 
+$(document).ready(function(){ 
+$("#btn").click(function(){ 
+$("#box").clone().appendTo("body"); 
+}) 
+}) 
+</script> 
+</body> 
+</html>
+
+ ------------------------------------------------------------------------------------------------ 
+
+4. replaceWith() method 
+
+-----------Program 1------------- 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>jQuery series</title> 
+<style> 
+#box{ 
+height:200px; 
+width:200px; 
+border:2px solid ridge; background-color:aqua ; 
+} 
+
+</style> </head> <body> <h1 id="output">
+</h1> 
+<div id="box"> 
+<h1 id="para">This is Paragraph</h1> 
+</div> <input type="button" value="Submit" id="btn"> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+ <script> 
+
+$(document).ready(function(){ 
+$("#btn").click(function(){ 
+
+$("#para").replaceWith("<h1>Hello world</h1>"); 
+
+}) 
+
+}) 
+
+</script> 
+
+</body> 
+
+</html> 
+
+---------Program 2------------ 
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>jQuery series</title> 
+
+<style> 
+
+#box{ 
+height:200px; 
+width:200px; 
+border:2px solid ridge; background-color:aqua ; 
+
+} 
+
+</style> 
+
+</head> 
+
+<body> 
+
+<h1 id="output"></h1> 
+<div id="box"> 
+
+<h1 id="para">This is Paragraph</h1> 
+</div> 
+
+<input type="button" value="Submit" id="btn"> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+<script> 
+
+$(document).ready(function(){ 
+
+$("#btn").click(function(){ 
+
+let a=prompt("Enter the task"); 
+
+$("#para").replaceWith("<h1>"+ a + "</h1>"); 
+
+}) 
+
+}) 
+
+</script> 
+
+</body> 
+
+</html> 
+
+5. replaceAll() method 
+
+6. wrap() :- jaise hmlog ek paragraph likh diye, phir chahte h ki wo ek div me aa jaye to hmlog wrap method lagaynge aur us wrap method me div parameter pass karenge 
+
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+<meta charset="UTF-8"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>jQuery series</title> 
+
+<style> 
+
+#box{ 
+
+height:200px;
+ width:200px; 
+border:2px solid ridge; background-color:aqua ; 
+
+} 
+
+</style> 
+
+</head> 
+
+<body> 
+
+<h1 id="output"></h1> 
+
+<h1 id="para">This is Paragraph</h1> 
+
+<input type="button" value="Wrap" id="btn"> 
+
+<input type="button" value="unWrap" id="btn2"> 
+
+<input type="button" value="WrapAll" id="btn3"> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+<script> 
+
+$(document).ready(function(){ 
+
+$("#btn").click(function(){ 
+
+$("#para").wrap("<div id='box'></div>") 
+
+}) 
+
+$("#btn2").click(function(){ $("#para").unwrap(); 
+
+}) 
+
+}) 
+
+</script> 
+
+</body>
+
+ </html> 
+
+------------------------------------------------------------------------------------ 
+
+//Each method 
+
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>jQuery series</title> 
+
+<style> 
+
+#box{ 
+
+height:200px; 
+
+width:200px; 
+
+border:2px solid ridge; background-color:aqua ; 
+
+} 
+
+</style> 
+
+</head> 
+
+<body> 
+
+<p>para1</p> 
+
+<p>para2</p> 
+
+<p>para3</p> 
+
+<p>para4</p> 
+<p>para5</p> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+</script> 
+
+<script> 
+
+$(document).ready(function(){ 
+
+$("p").each(function(){ 
+
+alert($(this).text()) 
+
+}) 
+
+}) 
+
+</script> 
+
+</body> 
+
+</html> 
+
+---------program 2---------- 
+
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+<meta charset="UTF-8"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>jQuery series</title> 
+
+<style> 
+
+#box{ 
+height:200px; 
+width:200px; 
+border:2px solid ridge; background-color:aqua ; 
+} 
+</style> 
+</head> 
+<body> 
+<ul> 
+<li>para1</li> 
+<li>para2</li> 
+<li>para3</li> 
+<li>para4</li> 
+<li>para5</li> 
+</ul> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+<script> 
+
+$(document).ready(function(){ 
+$("li").each(function(){ 
+
+alert($(this).text()) 
+}) 
+}) 
+
+</script> 
+
+</body> 
+
+</html>
